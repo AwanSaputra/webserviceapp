@@ -11,9 +11,11 @@ class ArticleController extends Controller
     
     public function index()
     {
+        $article = Article::all();
         return response()->json([
             'code' => 200,
-            'message' => 'this is article index'
+            'message' => 'articles list',
+            'data' => $article
         ]);
     }
 
@@ -41,6 +43,5 @@ class ArticleController extends Controller
                 400,
                 'message' => 'error creating article'
         ]);
-
-    }
-}
+    }  
+} 
