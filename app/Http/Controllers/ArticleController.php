@@ -44,4 +44,23 @@ class ArticleController extends Controller
                 'message' => 'error creating article'
         ]);
     }  
+
+    public function update($id, Request $request){
+        $article = Article::findOrFail($id);
+        $update = $article->update($request->all());
+
+        if($update){
+             return response()->json([
+                'code' => 200,
+                'message' => 'article updated'
+            ]);
+        }
+
+         return response()->json([
+                'code' => 400,
+                400,
+                'message' => 'error creating article'
+        ]);
+    }
+
 } 
