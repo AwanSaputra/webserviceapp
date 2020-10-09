@@ -20,10 +20,10 @@ class AuthController extends Controller
 
         if(!$user){
             return response()->json([
-                "code" => "401",
+                "code" => "400",
                 "message" => "Bad Credentials",
-                401
-            ]);
+               
+            ],400);
         }
 
         if(Hash::check($request->password,$user->password)){
@@ -37,9 +37,9 @@ class AuthController extends Controller
         }
 
         return response()->json([
-                "code" => "401",
+                "code" => "400",
                 "message" => "Bad Credentials",
-                401
-            ]);
+                
+        ],400);
     }
 }
