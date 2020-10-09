@@ -63,4 +63,20 @@ class ArticleController extends Controller
         ]);
     }
 
+    public function delete($id){
+        $delete = Article::findOrFail($id)->delete();
+        if($delete){
+             return response()->json([
+                'code' => 200,
+                'message' => 'article deleted'
+            ]);
+        }
+
+         return response()->json([
+                'code' => 400,
+                400,
+                'message' => 'error creating article'
+        ]);
+    }
+
 } 

@@ -18,3 +18,4 @@ $router->get('/', function () use ($router) {
 $router->get('/articles',['uses'=>'ArticleController@index','as'=>'articles']);
 $router->post('/create',['uses'=>'ArticleController@create','as'=>'create']);
 $router->put('/update/{id}',['uses'=>'ArticleController@update','as'=>'update']);
+$router->delete('/delete/{id}',['uses'=>'ArticleController@delete','as'=>'delete']);
