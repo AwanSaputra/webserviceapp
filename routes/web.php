@@ -15,6 +15,7 @@ $router->get('/', function () use ($router) {
     return "hello world!";
 });
 
+$router->post('/login',['uses'=>'AuthController@login','as'=>'login']);
 $router->get('/articles',['uses'=>'ArticleController@index','as'=>'articles']);
 $router->post('/create',['uses'=>'ArticleController@create','as'=>'create']);
 $router->put('/update/{id}',['uses'=>'ArticleController@update','as'=>'update']);
