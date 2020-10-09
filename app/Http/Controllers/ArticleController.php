@@ -18,6 +18,13 @@ class ArticleController extends Controller
     }
 
     public function create(Request $request){
+
+        $this->validate($request,[
+            'title' => 'required|min:20',
+            'content' => 'required'
+        ]);
+
+        
         $article = new Article;
         $article->title = $request->title;
         $article->content= $request->content;
