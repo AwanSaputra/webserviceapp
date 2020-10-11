@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "79129df3-af0f-4479-ad85-5194af9f865d",
+		"name": "seminar-webservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "the first article",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "Yuccie laboris veniam, pinterest beard pop-up cardigan letterpress tbh echo park jean shorts consectetur fashion axe voluptate paleo. Franzen post-ironic actually you probably haven't heard of them. Gentrify franzen ullamco coloring book la croix before they sold out tacos chia mlkshk. Minim normcore tousled shoreditch gastropub direct trade. Listicle vexillologist ramps, photo booth polaroid kickstarter swag 90's disrupt eiusmod portland letterpress taxidermy ugh bitters.",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://webservice.test/create",
+					"protocol": "http",
+					"host": [
+						"webservice",
+						"test"
+					],
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "secret",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://webservice.test/login",
+					"protocol": "http",
+					"host": [
+						"webservice",
+						"test"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "articles",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "the first article",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "Yuccie laboris veniam, pinterest beard pop-up cardigan letterpress tbh echo park jean shorts consectetur fashion axe voluptate paleo. Franzen post-ironic actually you probably haven't heard of them. Gentrify franzen ullamco coloring book la croix before they sold out tacos chia mlkshk. Minim normcore tousled shoreditch gastropub direct trade. Listicle vexillologist ramps, photo booth polaroid kickstarter swag 90's disrupt eiusmod portland letterpress taxidermy ugh bitters.",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://webservice.test/articles",
+					"protocol": "http",
+					"host": [
+						"webservice",
+						"test"
+					],
+					"path": [
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "update the first article",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "Yuccie laboris veniam, pinterest beard pop-up cardigan letterpress tbh echo park jean shorts consectetur fashion axe voluptate paleo. Franzen post-ironic actually you probably haven't heard of them. Gentrify franzen ullamco coloring book la croix before they sold out tacos chia mlkshk. Minim normcore tousled shoreditch gastropub direct trade. Listicle vexillologist ramps, photo booth polaroid kickstarter swag 90's disrupt eiusmod portland letterpress taxidermy ugh bitters.",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://webservice.test/update/1",
+					"protocol": "http",
+					"host": [
+						"webservice",
+						"test"
+					],
+					"path": [
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://webservice.test/delete/1",
+					"protocol": "http",
+					"host": [
+						"webservice",
+						"test"
+					],
+					"path": [
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
